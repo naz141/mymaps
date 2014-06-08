@@ -1,0 +1,59 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="new.min.css" />
+  <link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+  <link rel="stylesheet" href="jquery.mobile.structure-1.4.2.min.css" /> 
+	     <script type="text/javascript" src="map-js/jquery-1.4.2.min.js"></script>	 
+  <script src="jquery-1.10.2.min.js"></script> 
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+    <script type="text/javascript" src="map-js/jquery-ui-1.8.1.custom.min.js"></script>
+    <script type="text/javascript" src="map-js/main.js"></script>
+  <script src="jquery.mobile-1.4.2.min.js"></script> 
+  <style type="text/css">
+  #map-canvas { color:#000; height:  400px; border:#999 thin solid }
+  </style>
+</head>
+
+<body style="font-family:'Roboto Condensed', sans-serif;">
+
+<div data-role="tabs" id="tabs">
+	<div data-role="navbar">
+    	<ul>
+      	<li><a href="#one" data-ajax="false">Location</a></li>
+	    <li><a href="#two" data-ajax="false">About</a></li>
+    	</ul>
+	</div>
+	<div id="one" class="ui-body-d ui-content">
+    <fieldset class="ui-grid-a">
+    <div class="ui-block-a"><input name="desc" id="address" data-theme="a" type="text"  placeholder="From:" onKeyPress="return event.keyCode!=13;initialize();"/></div>
+    <div class="ui-block-b"><input name="too" id="to" data-theme="b"  type="text" placeholder="To" onKeyPress="return event.keyCode!=13;initialize();"/></div>
+	</fieldset>
+    <div class="ui-grid-solo">
+    <div class="ui-block-a"><button type="submit" onClick="calcRoute()">FIND</button></div>
+</div>
+    <fieldset class="ui-grid-a">
+    <div class="ui-block-a"><input id="distance"  type="text" class="form-control" disabled placeholder="Distance in km" /></div>
+	</fieldset>
+    <div class="ui-grid-solo">
+    <div id="map-canvas"></div>
+    </div>    
+</div>
+    
+	<div style=" margin:40px 40px auto" id="two">
+    
+    <p>Version: 1.0</p>
+ <p>Developed by eN-Lab</p>
+  <p>Email: anm.nasrullah@gmail.com</p>
+	</div>
+	</div>
+
+
+</body>
+</html>
